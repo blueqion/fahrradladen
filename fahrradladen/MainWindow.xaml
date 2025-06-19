@@ -1,0 +1,58 @@
+﻿<Window x:Class="fahrradladen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fahrradladen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Fertigwaren">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="87*"/>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="672*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="model" HorizontalAlignment="Left" Margin="43,59,0,0" VerticalAlignment="Top" Width="47" Height="26" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="TextBoxModel" HorizontalAlignment="Left" Margin="66,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <Button x:Name="___ButtonSpeichern_" Grid.Column="5" Content="Hinzufuegen" HorizontalAlignment="Left" Margin="66,152,0,0" VerticalAlignment="Top" Click="___ButtonSpeichern__Click"/>
+                    <ListBox x:Name="ListBoxFarradmodel" Grid.Column="5" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="276,50,254,184"/>
+                    <Label Grid.Column="5" Content="gesammtPreis" HorizontalAlignment="Left" Margin="276,273,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="LabelGesammtPreis" Grid.Column="5" Content="" HorizontalAlignment="Left" Margin="432,273,0,0" VerticalAlignment="Top"/>
+                    <ListBox x:Name="ListBoxRohstoffe" Grid.Column="5" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="466,50,51,184"/>
+                    <Label Grid.Column="5" Content="Fahrradmodel" HorizontalAlignment="Left" Margin="280,24,0,0" VerticalAlignment="Top"/>
+                    <Label Grid.Column="5" Content="Rohstoffe" HorizontalAlignment="Left" Margin="466,23,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="ButtonSpeichernrs" Header="Rohstoffe">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="79*"/>
+                        <ColumnDefinition Width="698*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Bezeichnung" HorizontalAlignment="Left" Margin="2,82,0,0" VerticalAlignment="Top" Grid.Column="2"/>
+                    <Label Content="Preis" HorizontalAlignment="Left" Margin="2,140,0,0" VerticalAlignment="Top" Grid.Column="2"/>
+                    <TextBox x:Name="TextBoxBezeichnung" HorizontalAlignment="Left" Margin="190,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                    <TextBox x:Name="TextBoxPreis" HorizontalAlignment="Left" Margin="190,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                    <DataGrid Margin="2,248,135,35" Grid.Column="2">
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn Header="id"/>
+                            <DataGridCheckBoxColumn Header="Bezeichnung"/>
+                            <DataGridCheckBoxColumn Header="Preis"/>
+                            <DataGridCheckBoxColumn Header="Anzahl"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Grid.Column="2" Content="Hinzufuegen" HorizontalAlignment="Left" Margin="190,203,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+                    <ListBox x:Name="ListBoxRohstoffe2" Grid.Column="2" Margin="349,82,99,189"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
