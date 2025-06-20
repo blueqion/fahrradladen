@@ -22,8 +22,7 @@
                     <TextBox x:Name="TextBoxModel" HorizontalAlignment="Left" Margin="66,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <Button x:Name="___ButtonSpeichern_" Grid.Column="5" Content="Hinzufuegen" HorizontalAlignment="Left" Margin="66,152,0,0" VerticalAlignment="Top" Click="___ButtonSpeichern__Click"/>
                     <ListBox x:Name="ListBoxFarradmodel" Grid.Column="5" Margin="276,50,254,184" SelectionChanged="fahrradmodell_selectionChanged"/>
-                    <Label Grid.Column="5" Content="gesammtPreis" HorizontalAlignment="Left" Margin="275,355,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="LabelGesammtPreis" Grid.Column="5" Content="" HorizontalAlignment="Left" Margin="432,273,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="LabelGesammtPreis" Grid.Column="5" Content="" HorizontalAlignment="Left" Margin="486,334,0,0" VerticalAlignment="Top"/>
                     <ListBox x:Name="ListBoxRohstoffe" Grid.Column="5" Margin="466,50,51,184"/>
                     <Label Grid.Column="5" Content="Fahrradmodel" HorizontalAlignment="Left" Margin="280,24,0,0" VerticalAlignment="Top"/>
                     <Label Grid.Column="5" Content="Rohstoffe" HorizontalAlignment="Left" Margin="466,23,0,0" VerticalAlignment="Top"/>
@@ -31,7 +30,7 @@
                     <Label Grid.Column="5" Content="Rohware" HorizontalAlignment="Left" Margin="201,257,0,0" VerticalAlignment="Top"/>
                     <Label Grid.Column="5" Content="Anzahl" HorizontalAlignment="Left" Margin="201,321,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="TextBoxAnzahl" Grid.Column="5" HorizontalAlignment="Center" Margin="0,329,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="ButtonZuordnen" Grid.Column="5" Content="Zuordnen" HorizontalAlignment="Left" Margin="481,270,0,0" VerticalAlignment="Top" Click="ButtonZuordnen_Click"/>
+                    <Button x:Name="ButtonZuordnen" Grid.Column="5" Content="Zuordnen" HorizontalAlignment="Left" Margin="488,255,0,0" VerticalAlignment="Top" Click="ButtonZuordnen_Click"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="ButtonSpeichernrs" Header="Rohstoffe">

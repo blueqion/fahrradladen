@@ -81,6 +81,7 @@ namespace fahrradladen
         private void listefuellenzuordnen(int fid)
         {
             ListBoxRohstoffe.Items.Clear();
+            double gesammtpreis = 0;
             List<Fwrs> fwrslist = new List<Fwrs>();
             fwrslist = db.readZuordnung(fid);
             foreach(Fwrs fwrs in fwrslist)
@@ -88,7 +89,9 @@ namespace fahrradladen
                 Rohstoffe temp = lrs.Find(x => x.RsId == fwrs.Rsid);
 
                 ListBoxRohstoffe.Items.Add(temp.RsBezeichnung + ", Anzahl: " + fwrs.Anzahl);
+                gesammtpreis = temp.RsPreis * fwrs.Anzahl + gesammtpreis;
             }
+            LabelGesammtPreis.Content = "Gesammtpreis: " + gesammtpreis;
         }
 
         private void fahrradmodell_selectionChanged(object sender, RoutedEventArgs e)
