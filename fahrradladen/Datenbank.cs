@@ -113,5 +113,29 @@ namespace fahrradladen
             conn.Close();
             return lrs;
         }
+        public List<Fwrs> readZuordnung(int fid)
+        {
+            List<Fwrs> lrsid = new List<Fwrs>();
+            conn.Open();
+            try
+            {
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = string.Format("SELECT rsid, rsAnzahl FROM fwrs where fwid={0};", fid);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Fwrs temp = new Fwrs(
+                        reader.GetInt32(0),
+                        reader.GetInt32(1));
+                    lrsid.Add(temp);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("readZuordnung wirft: " + ex.Message);
+            }
+            conn.Close();
+            return lrsid;
+        }
     }
 }
